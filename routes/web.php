@@ -3,14 +3,14 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view("home");
+    return view("home", ['title' => 'Home Page']);
 });
 Route::get('/about', function () {
-    return view("about", ['nama' => 'Rizqi Anggara']);
+    return view("about", ['title' => 'About'], ['name' => 'Anggara']);
 });
 Route::get('/blog', function () {
-    return view("blog", ['nama' => 'Rizqi Anggara', 'isi' => 'Ini berita 1, ada seorang anak di desa sukopuro malas ngoding']);
+    return view("blog", ['title' => 'Blog']);
 });
 Route::get('/contact', function () {
-    return view("contact");
+    return view("contact", ['title' => 'Contact']);
 });
